@@ -8,10 +8,6 @@ import adafruit_mprls
 import pwmio
 from adafruit_motor import servo
 
-# Entry Point for Serial Output
-print("version32")
-
-
 ### Pin Initialization ################################################################
 # Startup LED Initialization
 LED1 = DigitalInOut(board.D10)
@@ -137,17 +133,19 @@ print(pressure_data)
 print(light_data)
 print(car_data)
 
+try:
+    with open("/time.csv", "a") as fp:
+        fp.write(time_data)
+        fp.flush()
+    with open("/pressure.csv", "a") as fp:
+        fp.write(pressure_data)
+        fp.flush()
+    with open("/light.csv", "a") as fp:
+        fp.write(light_data)
+        fp.flush()
+    with open("/car.csv", "a") as fp:
+        fp.write(car_data)
+        fp.flush()
+except:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    print('Nope')
