@@ -1,0 +1,22 @@
+#######################################
+# Syntax Coloring Map For MkrGsm1400IoT
+####################################### 
+# Class
+#######################################
+
+
+#######################################
+# Methods and Functions 
+#######################################	
+
+resetUblox KEYWORD2
+writeSim KEYWORD2
+readSim KEYWORD2
+checkSimStatus KEYWORD2
+
+
+#######################################
+# Constants
+#######################################
+ 
+SECRET_PINNUMBER LITERAL1
